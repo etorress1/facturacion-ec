@@ -1,0 +1,25 @@
+# ==== Servidor ====
+PORT=4000
+NODE_ENV=development
+
+# ==== Base de datos MySQL ====
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=facturacion_ec
+DB_USER=root
+DB_PASSWORD=cambia_esto
+
+# ==== Autenticación ====
+JWT_SECRET=cambia_este_secreto_por_uno_largo_y_aleatorio
+JWT_EXPIRES_IN=8h
+
+# ==== Clave maestra para cifrar password de certificados de firma (.p12) ====
+APP_MASTER_KEY=cambia_esto_por_32_caracteres_aleatorios
+
+# ==== SRI (se usa cuando se activa la integración real) ====
+# Ambiente de pruebas SRI:
+SRI_WS_RECEPCION_PRUEBAS=https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl
+SRI_WS_AUTORIZACION_PRUEBAS=https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantesOffline?wsdl
+# Ambiente de producción SRI:
+SRI_WS_RECEPCION_PRODUCCION=https://cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl
+SRI_WS_AUTORIZACION_PRODUCCION=https://cel.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantesOffline?wsdl
